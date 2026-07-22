@@ -1,0 +1,55 @@
+name: Bug report
+description: Tell us about something that is not working as expected.
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please share enough detail for someone else to reproduce it.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Explain what you saw and what you expected instead.
+      placeholder: OpenCheck showed... I expected...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can we reproduce it?
+      description: Include the repository you checked and the steps you followed.
+      placeholder: |
+        1. Open OpenCheck
+        2. Enter owner/repository
+        3. Select Check repository
+        4. See the error
+    validations:
+      required: true
+
+  - type: input
+    id: repository
+    attributes:
+      label: Repository checked
+      description: Share the public GitHub repository URL if it is relevant to the bug.
+      placeholder: https://github.com/owner/repository
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      placeholder: Chrome 140 on Windows 11
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Quick checks
+      options:
+        - label: I checked that the repository is public.
+          required: true
+        - label: I searched for an existing issue about this problem.
+          required: true
