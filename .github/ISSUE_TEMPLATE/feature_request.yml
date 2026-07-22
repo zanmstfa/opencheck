@@ -1,0 +1,41 @@
+name: Feature request
+description: Suggest an improvement that would make OpenCheck more useful.
+title: "feat: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing an idea. Describe the problem first so the proposed solution has clear context.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      placeholder: It is difficult to... because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like OpenCheck to do?
+      description: Explain the smallest useful version of the improvement.
+      placeholder: OpenCheck could...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Have you considered another approach?
+      description: This is optional, but it helps us understand the tradeoffs.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Quick check
+      options:
+        - label: I searched for an existing issue about this idea.
+          required: true
