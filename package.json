@@ -1,0 +1,15 @@
+{
+  "name": "opencheck",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.local.config.js",
+    "build": "node scripts/clean-build.js && vite build --config vite.local.config.js && node scripts/build-worker.js",
+    "preview": "vite preview",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "vite": "^8.1.5"
+  }
+}
