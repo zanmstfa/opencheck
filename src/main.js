@@ -16,7 +16,7 @@ app.innerHTML = `
       </a>
       <nav class="nav-links" aria-label="Main navigation">
         <a class="nav-link" href="#how-it-works">How it works</a>
-        <a class="github-link" href="https://github.com" target="_blank" rel="noreferrer">
+        <a class="github-link" href="https://github.com/zanmstfa/opencheck" target="_blank" rel="noreferrer">
           <span class="github-mark" aria-hidden="true"></span>
           <span class="github-label">GitHub</span>
         </a>
