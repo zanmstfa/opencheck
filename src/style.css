@@ -413,14 +413,34 @@ h1 span {
 .result-footer {
   margin: 17px auto 0;
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
   color: var(--muted-2);
   font: 400 10px/1.4 "DM Mono", monospace;
   text-align: center;
 }
 
-.pulse { width: 6px; height: 6px; margin-top: 4px; flex: 0 0 auto; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 12px rgb(75 213 246 / 60%); }
+.pulse { width: 6px; height: 6px; flex: 0 0 auto; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 12px rgb(75 213 246 / 60%); }
+
+.copy-link-button {
+  margin-left: 8px;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  transition: color .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.copy-link-button:hover {
+  border-color: var(--line-bright);
+  color: var(--mint);
+  background: rgb(101 244 206 / 5%);
+}
 
 .loading-card, .error-card {
   min-height: 230px;

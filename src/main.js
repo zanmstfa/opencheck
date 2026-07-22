@@ -187,8 +187,27 @@ function renderReport(report) {
         ? 'Example only · run a check for live repository data'
         : `Checked just now${report.rateLimit?.remaining != null ? ` · ${report.rateLimit.remaining} API requests remaining` : ''}`
       }</span>
+      ${report.example
+        ? ''
+        : '<button class="copy-link-button" type="button" aria-live="polite">Copy report link</button>'
+      }
     </div>
   `
+
+  const copyLinkButton = result.querySelector('.copy-link-button')
+
+  copyLinkButton?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href)
+      copyLinkButton.textContent = 'Link copied'
+    } catch {
+      copyLinkButton.textContent = 'Could not copy'
+    }
+
+    window.setTimeout(() => {
+      copyLinkButton.textContent = 'Copy report link'
+    }, 2000)
+  })
 }
 
 function renderLoading(repository) {
